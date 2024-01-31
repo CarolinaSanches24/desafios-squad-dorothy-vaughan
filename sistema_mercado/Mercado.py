@@ -1,14 +1,10 @@
 from datetime import datetime
 #Modelagem inicial, aberta a mudanças
-class Mercado:
+class Cliente:
     def __init__(self, nome_cliente, telefone_cliente, endereco_cliente):
         self._nome = nome_cliente
         self._telefone = telefone_cliente
         self._endereco = endereco_cliente
-    
-class Cliente(Mercado):
-    def __init__(self, nome_cliente, telefone_cliente, endereco_cliente):
-        super().__init__(nome_cliente, telefone_cliente, endereco_cliente)
     
     #Método para exibir informações do cliente
     def __str__(self):
@@ -23,5 +19,11 @@ class Produto:
         self.quantiade = quantidade_produtos
         self.fornecedores =[]
 
+class Transacao:
+    def __init__(self, data_da_compra, cliente, produtos):
+        self._nome = data_da_compra
+        self._cliente = cliente
+        self._produtos = produtos
+    
 cliente1 = Cliente("Clarice", 87879494, "Campina Grande")
 print(cliente1)

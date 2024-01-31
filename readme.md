@@ -40,7 +40,7 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 
 ## Requisitos:
 
-1. Clarice Soares adicionou as primeiras linhas de código e criou três classes: Mercado, Cliente e Produto respeitando os critérios de Herança e adicionou os construtores.
+1. Clarice Soares adicionou as primeiras linhas de código e criou três classes: Cliente, Produto e Transação e adicionou os construtores.
 2.
 
 ## Desafio 3 - Banco de dados Sistema Gerenciamento Biblioteca
