@@ -38,7 +38,7 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 
 ### Forma de organização (como nos organizamos para fazer a resolução dos desafios):
 
-## Requisitos:
+#### Requisitos:
 
 1. Clarice Soares adicionou as primeiras linhas de código e criou três classes: Cliente, Produto e Transação e adicionou os construtores.
 2.
@@ -50,7 +50,7 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 
 ### Forma de organização (como nos organizamos para fazer a resolução dos desafios):
 
-## Requisitos:
+#### Requisitos:
 
 1. pessoa realizou e concluiu a atividade
 2.
@@ -62,7 +62,7 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 
 ### Forma de organização (como nos organizamos para fazer a resolução dos desafios):
 
-## Requisitos:
+#### Requisitos:
 
 1. pessoa realizou e concluiu a atividade
 2.
