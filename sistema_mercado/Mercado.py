@@ -1,36 +1,48 @@
+# Importando a biblioteca abc
+from abc import ABC, abstractmethod
 from datetime import datetime
 
 # Observaçoes falta adicionar mais coisas de POO e tratamento de erros
 # Por enquanto foi feita a modelagem 
 # e aplicado Herança
-class Pessoa :
+class Pessoa(ABC):
     def __init__(self, id, nome, telefone, endereco):
-        self._id= id;
-        self._nome = nome;
-        self._telefone = telefone;
-        self._endereco = endereco;
+        self._id= id
+        self._nome = nome
+        self._telefone = telefone
+        self._endereco = endereco
         
         @property
         def id(self):
-            return self._id;
+            return self._id
         @property
         def nome(self):
-            return self._nome;
+            return self._nome
         
         @property
         def telefone (self):
-            return self._telefone;
+            return self._telefone
         @property
         def endereco(self):
-            return self._endereco;
+            return self._endereco
+
+        # Método abstrato
+        @abstractmethod
+        def exibir_informacoes(self):
+            pass
         
 class Cliente(Pessoa):
     def __init__(self, id, nome, telefone, endereco):
         super().__init__(id, nome, telefone, endereco)
         
-         #Método para exibir informações do cliente
-    def __str__(self):
+         # Método para exibir informações do cliente utilizando o método abstrato
+    def exibir_informacoes(self):
+        return f'Cliente: {self._nome}\nTelefone: {self._telefone}\nEndereço: {self._endereco}'        
+        
+# Como estava
+''' def __str__(self):
         return f'Cliente: {self._nome}\nTelefone: {self._telefone}\nEndereço: {self._endereco}'
+'''        
 
 class Mercado():
     def __init__(self):
@@ -43,6 +55,19 @@ class Mercado():
         return self.__lista_transacoes;
     
     def vender_produto(self, produto, cliente, quantidade):
+
+        # Início de algumas verificações
+        if produto not in self.lista_produtos:
+            print('Produto não encontrado no mercado.')
+            return
+        if cliente not in self.__lista_clientes:
+            print('Cliente não registrado no mercado.')
+            return
+        if quantidade <= 0:
+            print('A quantidade deve ser maior que zero.')
+            return
+        # Fim de algumas verificações
+
         if quantidade > produto.quantidade_produtos:
             print("Quantidade insuficiente de produtos.")
             return
