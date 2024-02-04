@@ -1,4 +1,0 @@
-Código que Maitê passou no chat:
-
-cursor.execute('CREATE TABLE transacoes(id_transacao int primary key, dt_compra DATE, id_cliente INTEGER, FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente))')
-

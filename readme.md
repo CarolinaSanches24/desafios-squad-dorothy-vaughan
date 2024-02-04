@@ -56,5 +56,8 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 4. Compras feitas por um cliente especifico:
 
 #### Atualizações e exclusões:
+1. 
+2. 
+3. 
 
 
