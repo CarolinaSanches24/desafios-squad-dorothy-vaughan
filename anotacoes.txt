@@ -1,0 +1,16 @@
+Código que Maitê passou no chat:
+
+cursor.execute('CREATE TABLE transacoes(id_transacao int primary key, dt_compra DATE, id_cliente INTEGER, FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente))')
+
+Divisão do Squad em duas frentes:
+
+1. [Ana Carolina Fonseca Barreto] - BD
+2. [Jane Souza] - POO
+3. [Simone Braghin] - BD
+4. [Clarice Sofia Henrique Soares] - POO
+5. [Isadora Bagatini] - POO
+6. [Janaina Solidade] - ? 
+7. [Maitê Haramoni Soares] - BD
+8. [Thaís Aparecida dos Santos] - POO
+9. [Maria Carolina de J. de Moraes] - POO
+
