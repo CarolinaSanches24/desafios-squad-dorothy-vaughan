@@ -39,15 +39,15 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 
 #### Requisitos:
 
-1. Anafbarreto realizou e concluiu a atividade
+1. Anafbarreto realizou e concluiu a atividade.
 2. 
 
 #### Construção das tabelas:
-1. Anafbarreto realizou e concluiu a atividade
-2. MaiteHaramoni realizou e concluiu a atividade
+1. Anafbarreto contruiu as tabelas para produtos, clientes e contribuiu na inclusão da coluna valor_produto na tabela transação.
+2. MaiteHaramoni contruiu a tabela transação.
 
 #### Imput de dados:
-1. Anafbarreto realizou e concluiu a atividade
+1. Anafbarreto realizou e concluiu a atividade.
 
 #### Consultas:
 1. Consultar estoque:
