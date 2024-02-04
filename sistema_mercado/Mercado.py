@@ -46,13 +46,13 @@ class Cliente(Pessoa):
 
 class Mercado():
     def __init__(self):
-        self.__lista_clientes = [];
-        self.lista_produtos = [];
-        self.__lista_transacoes = [];
+        self.__lista_clientes = []
+        self.lista_produtos = []
+        self.__lista_transacoes = []
         
     @property 
     def lista_transacoes(self):
-        return self.__lista_transacoes;
+        return self.__lista_transacoes
     
     def vender_produto(self, produto, cliente, quantidade):
 
@@ -77,13 +77,13 @@ class Mercado():
         print(f"Compra realizada: {quantidade} unidades de {produto.nome}")
         
     def adicionar_cliente(self,cliente):
-        self.__lista_clientes.append(cliente);
+        self.__lista_clientes.append(cliente)
     def mostrar_clientes (self):
         for cliente in self.__lista_clientes:
             print(cliente)
             
     def adicionar_produto(self,produto):
-        self.lista_produtos.append(produto);
+        self.lista_produtos.append(produto)
     
     def mostrar_produtos(self):
         for produto in self.lista_produtos:
@@ -95,14 +95,14 @@ class Mercado():
             
 class Produto:
     def __init__(self, id_produto, nome_produto, quantidade_produtos):
-        self.id_produto = id_produto;
+        self.id_produto = id_produto
         self.nome = nome_produto
         self.categoria = []
-        self._quantidade_produtos = quantidade_produtos;
+        self._quantidade_produtos = quantidade_produtos
         self.fornecedores =[]
     
     def adicionar_fornecedor(self, fornecedor):
-        self.fornecedores.append(fornecedor);
+        self.fornecedores.append(fornecedor)
     
     def adicionar_categoria(self, categoria):
         self.categoria.append(categoria)
@@ -125,14 +125,14 @@ class Produto:
         
 class Transacao:
     def __init__(self, id_cliente, nome_cliente, produtos, quantidade):
-        self._id_cliente = id_cliente;
-        self._nome_cliente = nome_cliente;
+        self._id_cliente = id_cliente
+        self._nome_cliente = nome_cliente
         self._produtos = produtos
         self._quantidade = quantidade
-        self.data_da_compra = datetime.now();
+        self.data_da_compra = datetime.now()
     
     def __str__(self):
-        data_formatada = self.data_da_compra.strftime('%d %m %Y %H:%M');
+        data_formatada = self.data_da_compra.strftime('%d %m %Y %H:%M')
         return (f'ID: {self._id_cliente}\n'
                 f' Nome Cliente : {self._nome_cliente}\n'
                 f' Produtos : {self._produtos}\n'
@@ -141,27 +141,27 @@ class Transacao:
                 )
    
      
-mercado = Mercado();
+mercado = Mercado()
 cliente1 = Cliente(1,"Clarice", 87879494, "Campina Grande")
-mercado.adicionar_cliente(cliente1);
+mercado.adicionar_cliente(cliente1)
 
-produto1 = Produto(1,"Arroz",50);
-produto1.adicionar_categoria("Carboidratos");
+produto1 = Produto(1,"Arroz",50)
+produto1.adicionar_categoria("Carboidratos")
 produto1.adicionar_fornecedor("Comercial Norte Distribuição")
-mercado.adicionar_produto(produto1);
+mercado.adicionar_produto(produto1)
 
-produto2 = Produto(2,"Feijão",10);
-produto2.adicionar_categoria("Proteina");
+produto2 = Produto(2,"Feijão",10)
+produto2.adicionar_categoria("Proteina")
 produto2.adicionar_fornecedor("Comercial Norte Distribuição")
-mercado.adicionar_produto(produto2);
+mercado.adicionar_produto(produto2)
 
-mercado.vender_produto(produto1, cliente1, 10);
-mercado.vender_produto(produto2, cliente1, 5);
-mercado.vender_produto(produto2, cliente1, 10);
+mercado.vender_produto(produto1, cliente1, 10)
+mercado.vender_produto(produto2, cliente1, 5)
+mercado.vender_produto(produto2, cliente1, 10)
 #estoque do produto apos compras do cliente
-print(f'Estoque do produto\n {produto1}');
-print(f'Estoque do produto\n {produto2}');
+print(f'Estoque do produto\n {produto1}')
+print(f'Estoque do produto\n {produto2}')
 
-mercado.mostrar_transacoes();
-mercado.mostrar_clientes();
-mercado.mostrar_produtos();
+mercado.mostrar_transacoes()
+mercado.mostrar_clientes()
+mercado.mostrar_produtos()
