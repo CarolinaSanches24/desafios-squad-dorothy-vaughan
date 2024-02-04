@@ -18,20 +18,7 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 
 ---
 
-## Desafio 1 - Sistema de Gerenciamento de Biblioteca:
-
-    Branch:
-    ExerciciosPOO_DorothyVaughan
-
-### Forma de organização (como nos organizamos para fazer a resolução dos desafios):
-
-#### Requisitos 1,2,3,5 (em processo):
-
-1. Maria Carolina adicionou as primeiras linhas de código contendo métodos construtores, propriedades, e encapsulamento e metodos acessores getters e setters.
-2. Maria Carolina criou três classes : usuario, livro e exemplar.
-3.
-
-## Desafio 2 - Sistema de Gerenciamento de Mercado:
+## Desafio 1 - Sistema de Gerenciamento de Mercado:
 
     Branch:
     ExerciciosPOO_DorothyVaughan
@@ -43,7 +30,7 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 1. Clarice Soares adicionou as primeiras linhas de código e criou três classes: Cliente, Produto e Transação e adicionou os construtores.
 2. Maria carolina adicionou classe pessoa para aplicar conceito de herança visto que cliente e uma pessoa , criou a classe mercado adicionou também alguns metodos para adicionar os objetos clientes, produtos e armazenar o historico de transacoes em lista, assim como também métodos para mostrar os dados armazenados nas listas clientes, produtos, transacoes.
 
-## Desafio 3 - Banco de dados Sistema Gerenciamento Biblioteca
+## Desafio 2 - Banco de dados Sistema Gerenciamento Biblioteca
 
     Branch:
     ExerciciosBancoDeDados_DorothyVaughan
@@ -52,17 +39,22 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 
 #### Requisitos:
 
-1. pessoa realizou e concluiu a atividade
-2.
+1. Anafbarreto realizou e concluiu a atividade
+2. 
 
-## Desafio 4 - Banco de dados Sistema de Gerenciamento de Mercado:
+#### Construção das tabelas:
+1. Anafbarreto realizou e concluiu a atividade
+2. MaiteHaramoni realizou e concluiu a atividade
 
-    Branch:
-    ExerciciosBancoDeDados_DorothyVaughan
+#### Imput de dados:
+1. Anafbarreto realizou e concluiu a atividade
 
-### Forma de organização (como nos organizamos para fazer a resolução dos desafios):
+#### Consultas:
+1. Consultar estoque:
+2. Itens mais vendidos:
+3. Calcular venda total:
+4. Compras feitas por um cliente especifico:
 
-#### Requisitos:
+#### Atualizações e exclusões:
 
-1. pessoa realizou e concluiu a atividade
-2.
+
