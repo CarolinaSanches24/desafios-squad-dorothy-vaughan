@@ -55,7 +55,7 @@ class Mercado():
         return self.__lista_transacoes
     
     def vender_produto(self, produto, cliente, quantidade):
-
+remotes/origin/ExerciciosPOO_DorothyVaughan
         # Início de algumas verificações
         if produto not in self.lista_produtos:
             print('Produto não encontrado no mercado.')
