@@ -15,6 +15,7 @@ class Pessoa(ABC):
         @property
         def id(self):
             return self._id
+        
         @property
         def nome(self):
             return self._nome
@@ -56,25 +57,24 @@ class Mercado():
     
     def vender_produto(self, produto, cliente, quantidade):
 
-        # Início de algumas verificações
-        if produto not in self.lista_produtos:
-            print('Produto não encontrado no mercado.')
-            return
-        if cliente not in self.__lista_clientes:
-            print('Cliente não registrado no mercado.')
-            return
-        if quantidade <= 0:
-            print('A quantidade deve ser maior que zero.')
-            return
-        # Fim de algumas verificações
+        # Fazendo algumas verificações utilizando o conceito de tratamento de exceções:        
+        try:
+            if produto not in self.lista_produtos:
+                raise ValueError('Produto não encontrado no mercado.')
+            if cliente not in self.__lista_clientes:
+                raise ValueError('Cliente não registrado no mercado.')
+            if quantidade <= 0:
+                raise ValueError('A quantidade deve ser maior que zero.')
+            if quantidade > produto.quantidade_produtos:
+                raise ValueError('Quantidade insuficiente de produtos.')
 
-        if quantidade > produto.quantidade_produtos:
-            print("Quantidade insuficiente de produtos.")
-            return
-        produto.quantidade_produtos -= quantidade
-        transacao = Transacao(cliente._id, cliente._nome, produto.nome, quantidade)
-        self.__lista_transacoes.append(transacao)
-        print(f"Compra realizada: {quantidade} unidades de {produto.nome}")
+            # Se tudo estiver certo, realiza a venda
+            produto.quantidade_produtos -= quantidade
+            transacao = Transacao(cliente._id, cliente._nome, produto.nome, quantidade)
+            self.__lista_transacoes.append(transacao)
+            print(f"Compra realizada: {quantidade} unidades de {produto.nome}")
+        except ValueError as e:
+            print(f'Erro ao vender produto: {str(e)}') 
         
     def adicionar_cliente(self,cliente):
         self.__lista_clientes.append(cliente)
@@ -113,8 +113,7 @@ class Produto:
 
     @quantidade_produtos.setter
     def quantidade_produtos(self, nova_quantidade):
-        self._quantidade_produtos = nova_quantidade
-    
+        self._quantidade_produtos = nova_quantidade    
         
     def __str__(self):
         return (
