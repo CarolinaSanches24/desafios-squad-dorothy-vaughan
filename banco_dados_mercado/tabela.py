@@ -26,26 +26,47 @@ cursor = conexao.cursor()
 # cursor.execute('insert into transacoes(id_transacao, dt_compra, qtde_comprada, id_produto, id_cliente) values (4, "2024-02-02", 2, 2, 5)')
 # cursor.execute('insert into transacoes(id_transacao, dt_compra, qtde_comprada, id_produto, id_cliente) values (5, "2024-01-17", 2, 2, 1)')
 
+
 # Listar todos produtos em estoque:
 estoque_mercado = cursor.execute('SELECT nome_produto,qtde_produto FROM produtos') 
 for produtos in estoque_mercado:
    print(produtos)
+
 
 # Encontrar as compras realizadas por um cliente específico:
 compras_cliente = cursor.execute('SELECT id_transacao, dt_compra FROM transacoes WHERE id_cliente=1')
 for transacoes in compras_cliente:
    print(transacoes)
 
-# # Calcular o total de vendas por categoria de produto:
-# #group by
-# total_vendas = cursor.execute('SELECT qtde_comprada FROM transacoes')
 
+# Calcular o total de vendas por categoria de produto:
+categoria_produtos = {
+    0 : "todas",
+    1 : "limpeza",
+    2 : "mercado",
+    3 : "biscoitos",
+    4 : "bebidas"
+}
 
-# for transacoes in total_vendas:
-#     print(transacoes)
+total_vendas = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto')
+for produtos in total_vendas:
+    print(f"Nosso mercado vendeu o total de {produtos} categoria {categoria_produtos[0]}")
 
-# for categoria, total_vendas in :
-#     print(f'Categoria: {categoria}, Total de Vendas: {total_vendas}')
+total_vendas_limpeza = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = "limpeza"')
+for limpeza in total_vendas_limpeza:
+    print(f"Nosso mercado vendeu o total de {limpeza} categoria {categoria_produtos[1]}")
+
+total_vendas_mercado = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = "mercado"')
+for mercado in total_vendas_mercado:
+    print(f"Nosso mercado vendeu o total de {mercado} categoria {categoria_produtos[2]}")
+
+total_vendas_biscoitos = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = "biscoitos"')
+for biscoitos in total_vendas_biscoitos:
+    print(f"Nosso mercado vendeu o total de {biscoitos} categoria {categoria_produtos[3]}")
+
+total_vendas_bebidas = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = "bebidas"')
+for bebidas in total_vendas_bebidas:
+    print(f"Nosso mercado vendeu o total de {bebidas} categoria {categoria_produtos[4]}")
 
 
 # Identificar os produtos mais vendidos:
@@ -53,7 +74,6 @@ produtos_mais_vendidos = cursor.execute('SELECT * FROM transacoes ORDER BY qtde_
 for transacoes in produtos_mais_vendidos:
    print(transacoes)
   
-
 
 conexao.commit()
 conexao.close()

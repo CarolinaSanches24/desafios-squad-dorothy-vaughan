@@ -52,7 +52,7 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 #### Consultas:
 1. Listar todos os produtos em estoque: Simone gerou a consulta e concluiu a atividade
 2. Encontrar as compras realizadas por um cliente em específico: Simone gerou a consulta e concluiu a atividade
-3. Calcular o total de vendas por categoria de produto:
+3. Calcular o total de vendas por categoria de produto:Simone gerou a consulta e concluiu a atividade
 4. Identificar os produtos mais vendidos: Simone gerou a consulta e concluiu a atividade
 
 #### Atualizações e exclusões:
