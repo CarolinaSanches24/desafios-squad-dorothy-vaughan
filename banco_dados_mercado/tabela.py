@@ -26,33 +26,33 @@ cursor = conexao.cursor()
 # cursor.execute('insert into transacoes(id_transacao, dt_compra, qtde_comprada, id_produto, id_cliente) values (4, "2024-02-02", 2, 2, 5)')
 # cursor.execute('insert into transacoes(id_transacao, dt_compra, qtde_comprada, id_produto, id_cliente) values (5, "2024-01-17", 2, 2, 1)')
 
-# Listar todos produtos em estoque:
-# estoque_mercado = cursor.execute('SELECT nome_produto,qtde_produto FROM produtos') 
-# for produtos in estoque_mercado:
-#    print(produtos)
+Listar todos produtos em estoque:
+estoque_mercado = cursor.execute('SELECT nome_produto,qtde_produto FROM produtos') 
+for produtos in estoque_mercado:
+   print(produtos)
 
-# Encontrar as compras realizadas por um cliente específico:
-# compras_cliente = cursor.execute('SELECT id_transacao, dt_compra FROM transacoes WHERE id_cliente=1')
-# for transacoes in compras_cliente:
-#    print(transacoes)
+Encontrar as compras realizadas por um cliente específico:
+compras_cliente = cursor.execute('SELECT id_transacao, dt_compra FROM transacoes WHERE id_cliente=1')
+for transacoes in compras_cliente:
+   print(transacoes)
 
-# Calcular o total de vendas por categoria de produto:
-#group by
-total_vendas = cursor.execute('SELECT qtde_comprada FROM transacoes')
-
-
-for transacoes in total_vendas:
-    print(transacoes)
+# # Calcular o total de vendas por categoria de produto:
+# #group by
+# total_vendas = cursor.execute('SELECT qtde_comprada FROM transacoes')
 
 
+# for transacoes in total_vendas:
+#     print(transacoes)
 
-# for categoria, total_vendas in :
-#     print(f'Categoria: {categoria}, Total de Vendas: {total_vendas}')
 
-# Identificar os produtos mais vendidos:
-# produtos_mais_vendidos = cursor.execute('SELECT * FROM transacoes ORDER BY qtde_comprada,id_produto')
-# for transacoes in produtos_mais_vendidos:
-#    print(transacoes)
+
+for categoria, total_vendas in :
+    print(f'Categoria: {categoria}, Total de Vendas: {total_vendas}')
+
+Identificar os produtos mais vendidos:
+produtos_mais_vendidos = cursor.execute('SELECT * FROM transacoes ORDER BY qtde_comprada,id_produto')
+for transacoes in produtos_mais_vendidos:
+   print(transacoes)
   
 
 
