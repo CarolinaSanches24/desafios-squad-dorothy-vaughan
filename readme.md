@@ -47,7 +47,7 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 1. Anafbarreto contruiu as tabelas para produtos, clientes e contribuiu na inclusão da coluna valor_produto na tabela transação.
 2. MaiteHaramoni contruiu a tabela transação.
 
-#### Input de dados:
+#### Imput de dados:
 
 1. Anafbarreto realizou e concluiu a atividade.
 
