@@ -18,20 +18,7 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 
 ---
 
-## Desafio 1 - Sistema de Gerenciamento de Biblioteca:
-
-    Branch:
-    ExerciciosPOO_DorothyVaughan
-
-### Forma de organização (como nos organizamos para fazer a resolução dos desafios):
-
-#### Requisitos 1,2,3,5 (em processo):
-
-1. Maria Carolina adicionou as primeiras linhas de código contendo métodos construtores, propriedades, e encapsulamento e metodos acessores getters e setters.
-2. Maria Carolina criou três classes : usuario, livro e exemplar.
-3.
-
-## Desafio 2 - Sistema de Gerenciamento de Mercado:
+## Desafio 1 - Sistema de Gerenciamento de Mercado:
 
     Branch:
     ExerciciosPOO_DorothyVaughan
@@ -41,21 +28,9 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 #### Requisitos:
 
 1. Clarice Soares adicionou as primeiras linhas de código e criou três classes: Cliente, Produto e Transação e adicionou os construtores.
-2.
+2. Maria carolina adicionou classe pessoa para aplicar conceito de herança visto que cliente e uma pessoa , criou a classe mercado adicionou também alguns metodos para adicionar os objetos clientes, produtos e armazenar o historico de transacoes em lista, assim como também métodos para mostrar os dados armazenados nas listas clientes, produtos, transacoes.
 
-## Desafio 3 - Banco de dados Sistema Gerenciamento Biblioteca
-
-    Branch:
-    ExerciciosBancoDeDados_DorothyVaughan
-
-### Forma de organização (como nos organizamos para fazer a resolução dos desafios):
-
-#### Requisitos:
-
-1. pessoa realizou e concluiu a atividade
-2.
-
-## Desafio 4 - Banco de dados Sistema de Gerenciamento de Mercado:
+## Desafio 2 - Banco de dados Sistema Gerenciamento Biblioteca
 
     Branch:
     ExerciciosBancoDeDados_DorothyVaughan
@@ -64,5 +39,31 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 
 #### Requisitos:
 
-1. pessoa realizou e concluiu a atividade
+1. Anafbarreto realizou e concluiu a atividade.
 2.
+
+#### Construção das tabelas:
+
+1. Anafbarreto contruiu as tabelas para produtos, clientes e contribuiu na inclusão da coluna valor_produto na tabela transação.
+2. MaiteHaramoni contruiu a tabela transação.
+
+#### Input de dados:
+
+1. Anafbarreto realizou e concluiu a atividade.
+
+#### Consultas:
+
+1. Listar todos os produtos em estoque: Simone gerou a consulta e concluiu a atividade
+2. Encontrar as compras realizadas por um cliente em específico: Simone gerou a consulta e concluiu a atividade
+3. Calcular o total de vendas por categoria de produto:Simone gerou a consulta e concluiu a atividade
+4. Identificar os produtos mais vendidos: Simone gerou a consulta e concluiu a atividade
+
+#### Atualizações e exclusões:
+
+Escreva consultas SQL para atualizar e excluir registros do banco
+de dados, por exemplo, para atualizar a quantidade em estoque
+após uma venda ou remover um cliente.
+
+1.
+2.
+3.

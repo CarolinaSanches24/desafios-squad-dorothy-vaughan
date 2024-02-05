@@ -1,0 +1,154 @@
+[
+    {
+        "label": "colorama;",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "colorama;",
+        "description": "colorama;",
+        "detail": "colorama;",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Usuario",
+        "kind": 6,
+        "importPath": "sistema_biblioteca.Biblioteca",
+        "description": "sistema_biblioteca.Biblioteca",
+        "peekOfCode": "class Usuario:\n    def __init__(self, nome, telefone, nacionalidade):\n        self.__nome = nome\n        self.__telefone = telefone\n        self.__nacionalidade = nacionalidade\n    @property\n    def nome(self):\n        return self.__nome\n    @nome.setter\n    def nome(self, novo_nome):",
+        "detail": "sistema_biblioteca.Biblioteca",
+        "documentation": {}
+    },
+    {
+        "label": "Livro",
+        "kind": 6,
+        "importPath": "sistema_biblioteca.Biblioteca",
+        "description": "sistema_biblioteca.Biblioteca",
+        "peekOfCode": "class Livro:\n    def __init__(self, titulo, editora, numero_maximo_renovacoes):\n        self.titulo = titulo\n        self.editora = editora\n        self.generos = [];\n        self.numero_maximo_renovacoes = numero_maximo_renovacoes\n        self.autores = []\n        self.exemplares = []\n    def adicionar_autor(self, autor):\n        self.autores.append(autor)",
+        "detail": "sistema_biblioteca.Biblioteca",
+        "documentation": {}
+    },
+    {
+        "label": "Exemplar",
+        "kind": 6,
+        "importPath": "sistema_biblioteca.Biblioteca",
+        "description": "sistema_biblioteca.Biblioteca",
+        "peekOfCode": "class Exemplar:\n    def __init__(self, livro):\n        self.livro = livro\n        self.estado = \"disponivel\"\n        self.data_emprestimo = None\n        self.data_devolucao = None\n        self.renovacoes = 0\nusuario = Usuario(\" Juliana\", \"84237428\", \"Brasileiro\")\nprint(usuario);\nlivro = Livro(\"Harry Potter\", \"Editora A\", 5)",
+        "detail": "sistema_biblioteca.Biblioteca",
+        "documentation": {}
+    },
+    {
+        "label": "usuario",
+        "kind": 5,
+        "importPath": "sistema_biblioteca.Biblioteca",
+        "description": "sistema_biblioteca.Biblioteca",
+        "peekOfCode": "usuario = Usuario(\" Juliana\", \"84237428\", \"Brasileiro\")\nprint(usuario);\nlivro = Livro(\"Harry Potter\", \"Editora A\", 5)\nlivro.adicionar_autor('JK Rolling')\nlivro.adicionar_genero('Ficçao')\nlivro.adicionar_exemplar(livro.titulo);\nlivro.adicionar_exemplar(livro.titulo);\nprint(livro)\nprint(livro.exemplares)\nexemplar = Exemplar(livro);",
+        "detail": "sistema_biblioteca.Biblioteca",
+        "documentation": {}
+    },
+    {
+        "label": "livro",
+        "kind": 5,
+        "importPath": "sistema_biblioteca.Biblioteca",
+        "description": "sistema_biblioteca.Biblioteca",
+        "peekOfCode": "livro = Livro(\"Harry Potter\", \"Editora A\", 5)\nlivro.adicionar_autor('JK Rolling')\nlivro.adicionar_genero('Ficçao')\nlivro.adicionar_exemplar(livro.titulo);\nlivro.adicionar_exemplar(livro.titulo);\nprint(livro)\nprint(livro.exemplares)\nexemplar = Exemplar(livro);\nprint(exemplar.livro)",
+        "detail": "sistema_biblioteca.Biblioteca",
+        "documentation": {}
+    },
+    {
+        "label": "exemplar",
+        "kind": 5,
+        "importPath": "sistema_biblioteca.Biblioteca",
+        "description": "sistema_biblioteca.Biblioteca",
+        "peekOfCode": "exemplar = Exemplar(livro);\nprint(exemplar.livro)",
+        "detail": "sistema_biblioteca.Biblioteca",
+        "documentation": {}
+    },
+    {
+        "label": "Pesso",
+        "kind": 6,
+        "importPath": "sistema_mercado.Mercado",
+        "description": "sistema_mercado.Mercado",
+        "peekOfCode": "class Pessoa :\n    def __init__(self, id, nome, telefone, endereco):\n        self._id= id;\n        self._nome = nome;\n        self._telefone = telefone;\n        self._endereco = endereco;\n        @property\n        def id(self):\n            return self._id;\n        @property",
+        "detail": "sistema_mercado.Mercado",
+        "documentation": {}
+    },
+    {
+        "label": "Cliente",
+        "kind": 6,
+        "importPath": "sistema_mercado.Mercado",
+        "description": "sistema_mercado.Mercado",
+        "peekOfCode": "class Cliente(Pessoa):\n    def __init__(self, id, nome, telefone, endereco):\n        super().__init__(id, nome, telefone, endereco)\n         #Método para exibir informações do cliente\n    def __str__(self):\n        return f'Cliente: {self._nome}\\nTelefone: {self._telefone}\\nEndereço: {self._endereco}'\nclass Mercado():\n    def __init__(self):\n        self.__lista_clientes = [];\n        self.lista_produtos = [];",
+        "detail": "sistema_mercado.Mercado",
+        "documentation": {}
+    },
+    {
+        "label": "Mercado",
+        "kind": 6,
+        "importPath": "sistema_mercado.Mercado",
+        "description": "sistema_mercado.Mercado",
+        "peekOfCode": "class Mercado():\n    def __init__(self):\n        self.__lista_clientes = [];\n        self.lista_produtos = [];\n        self.__lista_transacoes = [];\n    @property \n    def lista_transacoes(self):\n        return self.__lista_transacoes;\n    def vender_produto(self, produto, cliente, quantidade):\n        if quantidade > produto.quantidade_produtos:",
+        "detail": "sistema_mercado.Mercado",
+        "documentation": {}
+    },
+    {
+        "label": "Produto",
+        "kind": 6,
+        "importPath": "sistema_mercado.Mercado",
+        "description": "sistema_mercado.Mercado",
+        "peekOfCode": "class Produto:\n    def __init__(self, id_produto, nome_produto, quantidade_produtos):\n        self.id_produto = id_produto;\n        self.nome = nome_produto\n        self.categoria = []\n        self._quantidade_produtos = quantidade_produtos;\n        self.fornecedores =[]\n    def adicionar_fornecedor(self, fornecedor):\n        self.fornecedores.append(fornecedor);\n    def adicionar_categoria(self, categoria):",
+        "detail": "sistema_mercado.Mercado",
+        "documentation": {}
+    },
+    {
+        "label": "Transacao",
+        "kind": 6,
+        "importPath": "sistema_mercado.Mercado",
+        "description": "sistema_mercado.Mercado",
+        "peekOfCode": "class Transacao:\n    def __init__(self, id_cliente, nome_cliente, produtos, quantidade):\n        self._id_cliente = id_cliente;\n        self._nome_cliente = nome_cliente;\n        self._produtos = produtos\n        self._quantidade = quantidade\n        self.data_da_compra = datetime.now();\n    def __str__(self):\n        data_formatada = self.data_da_compra.strftime('%d %m %Y %H:%M');\n        return (f'ID: {self._id_cliente}\\n'",
+        "detail": "sistema_mercado.Mercado",
+        "documentation": {}
+    },
+    {
+        "label": "mercado",
+        "kind": 5,
+        "importPath": "sistema_mercado.Mercado",
+        "description": "sistema_mercado.Mercado",
+        "peekOfCode": "mercado = Mercado();\ncliente1 = Cliente(1,\"Clarice\", 87879494, \"Campina Grande\")\nmercado.adicionar_cliente(cliente1);\nproduto1 = Produto(1,\"Arroz\",50);\nproduto1.adicionar_categoria(\"Carboidratos\");\nproduto1.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto1);\nproduto2 = Produto(2,\"Feijão\",10);\nproduto2.adicionar_categoria(\"Proteina\");\nproduto2.adicionar_fornecedor(\"Comercial Norte Distribuição\")",
+        "detail": "sistema_mercado.Mercado",
+        "documentation": {}
+    },
+    {
+        "label": "cliente1",
+        "kind": 5,
+        "importPath": "sistema_mercado.Mercado",
+        "description": "sistema_mercado.Mercado",
+        "peekOfCode": "cliente1 = Cliente(1,\"Clarice\", 87879494, \"Campina Grande\")\nmercado.adicionar_cliente(cliente1);\nproduto1 = Produto(1,\"Arroz\",50);\nproduto1.adicionar_categoria(\"Carboidratos\");\nproduto1.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto1);\nproduto2 = Produto(2,\"Feijão\",10);\nproduto2.adicionar_categoria(\"Proteina\");\nproduto2.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto2);",
+        "detail": "sistema_mercado.Mercado",
+        "documentation": {}
+    },
+    {
+        "label": "produto1",
+        "kind": 5,
+        "importPath": "sistema_mercado.Mercado",
+        "description": "sistema_mercado.Mercado",
+        "peekOfCode": "produto1 = Produto(1,\"Arroz\",50);\nproduto1.adicionar_categoria(\"Carboidratos\");\nproduto1.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto1);\nproduto2 = Produto(2,\"Feijão\",10);\nproduto2.adicionar_categoria(\"Proteina\");\nproduto2.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto2);\nmercado.vender_produto(produto1, cliente1, 10);\nmercado.vender_produto(produto2, cliente1, 5);",
+        "detail": "sistema_mercado.Mercado",
+        "documentation": {}
+    },
+    {
+        "label": "produto2",
+        "kind": 5,
+        "importPath": "sistema_mercado.Mercado",
+        "description": "sistema_mercado.Mercado",
+        "peekOfCode": "produto2 = Produto(2,\"Feijão\",10);\nproduto2.adicionar_categoria(\"Proteina\");\nproduto2.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto2);\nmercado.vender_produto(produto1, cliente1, 10);\nmercado.vender_produto(produto2, cliente1, 5);\nmercado.vender_produto(produto2, cliente1, 10);\n#estoque do produto apos compras do cliente\nprint(f'Estoque do produto\\n {produto1}');\nprint(f'Estoque do produto\\n {produto2}');",
+        "detail": "sistema_mercado.Mercado",
+        "documentation": {}
+    }
+]
