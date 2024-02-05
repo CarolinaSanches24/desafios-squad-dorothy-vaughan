@@ -50,12 +50,15 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 1. Anafbarreto realizou e concluiu a atividade.
 
 #### Consultas:
-1. Consultar estoque:
-2. Itens mais vendidos:
-3. Calcular venda total:
-4. Compras feitas por um cliente especifico:
+1. Listar todos os produtos em estoque: Simone gerou a consulta e concluiu a atividade
+2. Encontrar as compras realizadas por um cliente em específico: Simone gerou a consulta e concluiu a atividade
+3. Calcular o total de vendas por categoria de produto:
+4. Identificar os produtos mais vendidos: Simone gerou a consulta e concluiu a atividade
 
 #### Atualizações e exclusões:
+Escreva consultas SQL para atualizar e excluir registros do banco
+de dados, por exemplo, para atualizar a quantidade em estoque
+após uma venda ou remover um cliente.
 1. 
 2. 
 3. 

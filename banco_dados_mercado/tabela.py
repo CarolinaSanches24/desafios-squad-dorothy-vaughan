@@ -36,6 +36,16 @@ compras_cliente = cursor.execute('SELECT id_transacao, dt_compra FROM transacoes
 for transacoes in compras_cliente:
    print(transacoes)
 
+# # Calcular o total de vendas por categoria de produto:
+# #group by
+# total_vendas = cursor.execute('SELECT qtde_comprada FROM transacoes')
+
+
+# for transacoes in total_vendas:
+#     print(transacoes)
+
+# for categoria, total_vendas in :
+#     print(f'Categoria: {categoria}, Total de Vendas: {total_vendas}')
 
 
 # Identificar os produtos mais vendidos:
