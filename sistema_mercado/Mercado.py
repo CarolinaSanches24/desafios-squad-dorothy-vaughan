@@ -2,9 +2,6 @@
 from abc import ABC, abstractmethod
 from datetime import datetime
 
-# Observaçoes falta adicionar mais coisas de POO e tratamento de erros
-# Por enquanto foi feita a modelagem 
-# e aplicado Herança
 class Pessoa(ABC):
     def __init__(self, id, nome, telefone, endereco):
         self._id= id
@@ -12,25 +9,25 @@ class Pessoa(ABC):
         self._telefone = telefone
         self._endereco = endereco
         
-        @property
-        def id(self):
-            return self._id
+    @property
+    def id(self):
+        return self._id
         
-        @property
-        def nome(self):
-            return self._nome
+    @property
+    def nome(self):
+        return self._nome
         
-        @property
-        def telefone (self):
-            return self._telefone
-        @property
-        def endereco(self):
-            return self._endereco
+    @property
+    def telefone (self):
+        return self._telefone
+    @property
+    def endereco(self):
+        return self._endereco
 
-        # Método abstrato
-        @abstractmethod
-        def exibir_informacoes(self):
-            pass
+    # Método abstrato
+    @abstractmethod
+    def exibir_informacoes(self):
+        pass
         
 class Cliente(Pessoa):
     def __init__(self, id, nome, telefone, endereco):
@@ -39,12 +36,7 @@ class Cliente(Pessoa):
          # Método para exibir informações do cliente utilizando o método abstrato
     def exibir_informacoes(self):
         return f'Cliente: {self._nome}\nTelefone: {self._telefone}\nEndereço: {self._endereco}'        
-        
-# Como estava
-''' def __str__(self):
-        return f'Cliente: {self._nome}\nTelefone: {self._telefone}\nEndereço: {self._endereco}'
-'''        
-
+            
 class Mercado():
     def __init__(self):
         self.__lista_clientes = []
@@ -55,6 +47,29 @@ class Mercado():
     def lista_transacoes(self):
         return self.__lista_transacoes
     
+    def adicionar_cliente(self,cliente):
+        self.__lista_clientes.append(cliente)
+        
+    def mostrar_clientes(self):
+        for cliente in self.__lista_clientes:
+            cliente = {
+                "Nome":{cliente.nome},
+                "Telefone":{cliente.telefone},
+                "Endereço":{cliente.endereco}
+            }
+            print(cliente)
+            
+    def adicionar_produto(self,produto):
+        self.lista_produtos.append(produto)
+    
+    def mostrar_produtos(self):
+        for produto in self.lista_produtos:
+            print(produto)
+        
+    def mostrar_transacoes (self):
+        for transacao in self.__lista_transacoes:
+            print(transacao)
+            
     def vender_produto(self, produto, cliente, quantidade):
 
         # Fazendo algumas verificações utilizando o conceito de tratamento de exceções:        
@@ -76,22 +91,7 @@ class Mercado():
         except ValueError as e:
             print(f'Erro ao vender produto: {str(e)}') 
         
-    def adicionar_cliente(self,cliente):
-        self.__lista_clientes.append(cliente)
-    def mostrar_clientes (self):
-        for cliente in self.__lista_clientes:
-            print(cliente)
-            
-    def adicionar_produto(self,produto):
-        self.lista_produtos.append(produto)
     
-    def mostrar_produtos(self):
-        for produto in self.lista_produtos:
-            print(produto)
-        
-    def mostrar_transacoes (self):
-        for transacao in self.__lista_transacoes:
-            print(transacao)
             
 class Produto:
     def __init__(self, id_produto, nome_produto, quantidade_produtos):
@@ -142,8 +142,10 @@ class Transacao:
      
 mercado = Mercado()
 cliente1 = Cliente(1,"Clarice", 87879494, "Campina Grande")
+print(cliente1.exibir_informacoes())
+cliente2 = Cliente(2,"Carol",78459682,"Novo Buritizal")
 mercado.adicionar_cliente(cliente1)
-
+mercado.adicionar_cliente(cliente2)
 produto1 = Produto(1,"Arroz",50)
 produto1.adicionar_categoria("Carboidratos")
 produto1.adicionar_fornecedor("Comercial Norte Distribuição")
