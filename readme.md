@@ -66,6 +66,6 @@ Escreva consultas SQL para atualizar e excluir registros do banco
 de dados, por exemplo, para atualizar a quantidade em estoque
 após uma venda ou remover um cliente.
 
-1.
-2.
-3.
+1. MaiteHaramoni atualizou a tabela produtos com -3 produtos do id produto 1.
+2. MaiteHaramoni atualizou a tabela produtos com alteração de preço do id produto 5 para 9.90.
+3. MaiteHaramoni excluiu o registro da tabela clientes do id cliente 2.
