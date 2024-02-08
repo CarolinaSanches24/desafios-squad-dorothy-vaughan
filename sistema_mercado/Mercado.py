@@ -2,9 +2,6 @@
 from abc import ABC, abstractmethod
 from datetime import datetime
 
-# Observaçoes falta adicionar mais coisas de POO e tratamento de erros
-# Por enquanto foi feita a modelagem 
-# e aplicado Herança
 class Pessoa(ABC):
     def __init__(self, id, nome, telefone, endereco):
         self._id= id
@@ -12,24 +9,25 @@ class Pessoa(ABC):
         self._telefone = telefone
         self._endereco = endereco
         
-        @property
-        def id(self):
-            return self._id
-        @property
-        def nome(self):
-            return self._nome
+    @property
+    def id(self):
+        return self._id
         
-        @property
-        def telefone (self):
-            return self._telefone
-        @property
-        def endereco(self):
-            return self._endereco
+    @property
+    def nome(self):
+        return self._nome
+        
+    @property
+    def telefone (self):
+        return self._telefone
+    @property
+    def endereco(self):
+        return self._endereco
 
-        # Método abstrato
-        @abstractmethod
-        def exibir_informacoes(self):
-            pass
+    # Método abstrato
+    @abstractmethod
+    def exibir_informacoes(self):
+        pass
         
 class Cliente(Pessoa):
     def __init__(self, id, nome, telefone, endereco):
@@ -38,12 +36,7 @@ class Cliente(Pessoa):
          # Método para exibir informações do cliente utilizando o método abstrato
     def exibir_informacoes(self):
         return f'Cliente: {self._nome}\nTelefone: {self._telefone}\nEndereço: {self._endereco}'        
-        
-# Como estava
-''' def __str__(self):
-        return f'Cliente: {self._nome}\nTelefone: {self._telefone}\nEndereço: {self._endereco}'
-'''        
-
+            
 class Mercado():
     def __init__(self):
         self.__lista_clientes = []
@@ -54,32 +47,16 @@ class Mercado():
     def lista_transacoes(self):
         return self.__lista_transacoes
     
-    def vender_produto(self, produto, cliente, quantidade):
-remotes/origin/ExerciciosPOO_DorothyVaughan
-        # Início de algumas verificações
-        if produto not in self.lista_produtos:
-            print('Produto não encontrado no mercado.')
-            return
-        if cliente not in self.__lista_clientes:
-            print('Cliente não registrado no mercado.')
-            return
-        if quantidade <= 0:
-            print('A quantidade deve ser maior que zero.')
-            return
-        # Fim de algumas verificações
-
-        if quantidade > produto.quantidade_produtos:
-            print("Quantidade insuficiente de produtos.")
-            return
-        produto.quantidade_produtos -= quantidade
-        transacao = Transacao(cliente._id, cliente._nome, produto.nome, quantidade)
-        self.__lista_transacoes.append(transacao)
-        print(f"Compra realizada: {quantidade} unidades de {produto.nome}")
-        
     def adicionar_cliente(self,cliente):
         self.__lista_clientes.append(cliente)
-    def mostrar_clientes (self):
+        
+    def mostrar_clientes(self):
         for cliente in self.__lista_clientes:
+            cliente = {
+                "Nome":{cliente.nome},
+                "Telefone":{cliente.telefone},
+                "Endereço":{cliente.endereco}
+            }
             print(cliente)
             
     def adicionar_produto(self,produto):
@@ -93,14 +70,43 @@ remotes/origin/ExerciciosPOO_DorothyVaughan
         for transacao in self.__lista_transacoes:
             print(transacao)
             
+    def vender_produto(self, produto, cliente, quantidade):
+
+        # Fazendo algumas verificações utilizando o conceito de tratamento de exceções:        
+        try:
+            if produto not in self.lista_produtos:
+                raise ValueError('Produto não encontrado no mercado.')
+            if cliente not in self.__lista_clientes:
+                raise ValueError('Cliente não registrado no mercado.')
+            if quantidade <= 0:
+                raise ValueError('A quantidade deve ser maior que zero.')
+            if quantidade > produto.quantidade_produtos:
+                raise ValueError('Quantidade insuficiente de produtos.')
+
+            # Se tudo estiver certo, realiza a venda
+            produto.quantidade_produtos -= quantidade
+            transacao = Transacao(cliente._id, cliente._nome, produto.nome, quantidade)
+            self.__lista_transacoes.append(transacao)
+            print(f"Compra realizada: {quantidade} unidades de {produto.nome}")
+        except ValueError as e:
+            print(f'Erro ao vender produto: {str(e)}') 
+        
+    
+            
+
 class Produto:
     def __init__(self, id_produto, nome_produto, quantidade_produtos):
-        self.id_produto = id_produto
-        self.nome = nome_produto
+        self.__id_produto = id_produto
+        self.__nome = nome_produto
         self.categoria = []
         self._quantidade_produtos = quantidade_produtos
         self.fornecedores =[]
-    
+    @property
+    def id_produto(self):
+        return self.__id_produto
+    @property
+    def nome(self):
+        return self.__nome
     def adicionar_fornecedor(self, fornecedor):
         self.fornecedores.append(fornecedor)
     
@@ -113,8 +119,7 @@ class Produto:
 
     @quantidade_produtos.setter
     def quantidade_produtos(self, nova_quantidade):
-        self._quantidade_produtos = nova_quantidade
-    
+        self._quantidade_produtos = nova_quantidade    
         
     def __str__(self):
         return (
@@ -143,8 +148,10 @@ class Transacao:
      
 mercado = Mercado()
 cliente1 = Cliente(1,"Clarice", 87879494, "Campina Grande")
+print(cliente1.exibir_informacoes())
+cliente2 = Cliente(2,"Carol",78459682,"Novo Buritizal")
 mercado.adicionar_cliente(cliente1)
-
+mercado.adicionar_cliente(cliente2)
 produto1 = Produto(1,"Arroz",50)
 produto1.adicionar_categoria("Carboidratos")
 produto1.adicionar_fornecedor("Comercial Norte Distribuição")
