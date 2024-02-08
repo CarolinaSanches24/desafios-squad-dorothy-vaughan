@@ -1,11 +1,27 @@
 [
     {
-        "label": "colorama;",
+        "label": "sqlite3",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "colorama;",
-        "description": "colorama;",
-        "detail": "colorama;",
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
         "documentation": {}
     },
     {
@@ -17,65 +33,110 @@
         "documentation": {}
     },
     {
-        "label": "Usuario",
-        "kind": 6,
-        "importPath": "sistema_biblioteca.Biblioteca",
-        "description": "sistema_biblioteca.Biblioteca",
-        "peekOfCode": "class Usuario:\n    def __init__(self, nome, telefone, nacionalidade):\n        self.__nome = nome\n        self.__telefone = telefone\n        self.__nacionalidade = nacionalidade\n    @property\n    def nome(self):\n        return self.__nome\n    @nome.setter\n    def nome(self, novo_nome):",
-        "detail": "sistema_biblioteca.Biblioteca",
-        "documentation": {}
-    },
-    {
-        "label": "Livro",
-        "kind": 6,
-        "importPath": "sistema_biblioteca.Biblioteca",
-        "description": "sistema_biblioteca.Biblioteca",
-        "peekOfCode": "class Livro:\n    def __init__(self, titulo, editora, numero_maximo_renovacoes):\n        self.titulo = titulo\n        self.editora = editora\n        self.generos = [];\n        self.numero_maximo_renovacoes = numero_maximo_renovacoes\n        self.autores = []\n        self.exemplares = []\n    def adicionar_autor(self, autor):\n        self.autores.append(autor)",
-        "detail": "sistema_biblioteca.Biblioteca",
-        "documentation": {}
-    },
-    {
-        "label": "Exemplar",
-        "kind": 6,
-        "importPath": "sistema_biblioteca.Biblioteca",
-        "description": "sistema_biblioteca.Biblioteca",
-        "peekOfCode": "class Exemplar:\n    def __init__(self, livro):\n        self.livro = livro\n        self.estado = \"disponivel\"\n        self.data_emprestimo = None\n        self.data_devolucao = None\n        self.renovacoes = 0\nusuario = Usuario(\" Juliana\", \"84237428\", \"Brasileiro\")\nprint(usuario);\nlivro = Livro(\"Harry Potter\", \"Editora A\", 5)",
-        "detail": "sistema_biblioteca.Biblioteca",
-        "documentation": {}
-    },
-    {
-        "label": "usuario",
+        "label": "conexao",
         "kind": 5,
-        "importPath": "sistema_biblioteca.Biblioteca",
-        "description": "sistema_biblioteca.Biblioteca",
-        "peekOfCode": "usuario = Usuario(\" Juliana\", \"84237428\", \"Brasileiro\")\nprint(usuario);\nlivro = Livro(\"Harry Potter\", \"Editora A\", 5)\nlivro.adicionar_autor('JK Rolling')\nlivro.adicionar_genero('Ficçao')\nlivro.adicionar_exemplar(livro.titulo);\nlivro.adicionar_exemplar(livro.titulo);\nprint(livro)\nprint(livro.exemplares)\nexemplar = Exemplar(livro);",
-        "detail": "sistema_biblioteca.Biblioteca",
+        "importPath": "banco_dados_mercado.tabela",
+        "description": "banco_dados_mercado.tabela",
+        "peekOfCode": "conexao = sqlite3.connect('mercado.bd')\ncursor = conexao.cursor()\n# cursor.execute('CREATE TABLE clientes(id_cliente int primary key, nome_cliente varchar(100), telefone_cliente varchar(20), endereco_cliente varchar(100))')\n# cursor.execute('CREATE TABLE produtos(id_produto int primary key, nome_produto varchar(100), categoria_produto varchar(50), qtde_produto int, valor_produto money, fornecedor_produto varchar(100))')\n# cursor.execute('CREATE TABLE transacoes(id_transacao int primary key, dt_compra DATE, qtde_comprada int, id_cliente int, id_produto int, FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente), FOREIGN KEY (id_produto) REFERENCES produtos(id_produto))')\n# cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (1, \"Ana\", \"12344321\", \"rua flores\") ')\n# cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (2, \"Maite\", \"12344377\", \"rua jardim\")')\n# cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (3, \"Simone\", \"34544321\", \"rua rosas\")')\n# cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (4, \"Jane\", \"12355321\", \"rua margaridas\")')\n# cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (5, \"Isadora\", \"12346661\", \"rua tulipa\")')",
+        "detail": "banco_dados_mercado.tabela",
         "documentation": {}
     },
     {
-        "label": "livro",
+        "label": "cursor",
         "kind": 5,
-        "importPath": "sistema_biblioteca.Biblioteca",
-        "description": "sistema_biblioteca.Biblioteca",
-        "peekOfCode": "livro = Livro(\"Harry Potter\", \"Editora A\", 5)\nlivro.adicionar_autor('JK Rolling')\nlivro.adicionar_genero('Ficçao')\nlivro.adicionar_exemplar(livro.titulo);\nlivro.adicionar_exemplar(livro.titulo);\nprint(livro)\nprint(livro.exemplares)\nexemplar = Exemplar(livro);\nprint(exemplar.livro)",
-        "detail": "sistema_biblioteca.Biblioteca",
+        "importPath": "banco_dados_mercado.tabela",
+        "description": "banco_dados_mercado.tabela",
+        "peekOfCode": "cursor = conexao.cursor()\n# cursor.execute('CREATE TABLE clientes(id_cliente int primary key, nome_cliente varchar(100), telefone_cliente varchar(20), endereco_cliente varchar(100))')\n# cursor.execute('CREATE TABLE produtos(id_produto int primary key, nome_produto varchar(100), categoria_produto varchar(50), qtde_produto int, valor_produto money, fornecedor_produto varchar(100))')\n# cursor.execute('CREATE TABLE transacoes(id_transacao int primary key, dt_compra DATE, qtde_comprada int, id_cliente int, id_produto int, FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente), FOREIGN KEY (id_produto) REFERENCES produtos(id_produto))')\n# cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (1, \"Ana\", \"12344321\", \"rua flores\") ')\n# cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (2, \"Maite\", \"12344377\", \"rua jardim\")')\n# cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (3, \"Simone\", \"34544321\", \"rua rosas\")')\n# cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (4, \"Jane\", \"12355321\", \"rua margaridas\")')\n# cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (5, \"Isadora\", \"12346661\", \"rua tulipa\")')\n# cursor.execute('insert into produtos(id_produto, nome_produto, categoria_produto, qtde_produto, valor_produto, fornecedor_produto) values (1, \"sabao limpinho\", \"limpeza\", 10, 5.00, \"triex\")')",
+        "detail": "banco_dados_mercado.tabela",
         "documentation": {}
     },
     {
-        "label": "exemplar",
+        "label": "estoque_mercado",
         "kind": 5,
-        "importPath": "sistema_biblioteca.Biblioteca",
-        "description": "sistema_biblioteca.Biblioteca",
-        "peekOfCode": "exemplar = Exemplar(livro);\nprint(exemplar.livro)",
-        "detail": "sistema_biblioteca.Biblioteca",
+        "importPath": "banco_dados_mercado.tabela",
+        "description": "banco_dados_mercado.tabela",
+        "peekOfCode": "estoque_mercado = cursor.execute('SELECT nome_produto,qtde_produto FROM produtos') \nfor produtos in estoque_mercado:\n   print(produtos)\n# Encontrar as compras realizadas por um cliente específico:\ncompras_cliente = cursor.execute('SELECT id_transacao, dt_compra FROM transacoes WHERE id_cliente=1')\nfor transacoes in compras_cliente:\n   print(transacoes)\n# Calcular o total de vendas por categoria de produto:\ncategoria_produtos = {\n    0 : \"todas\",",
+        "detail": "banco_dados_mercado.tabela",
         "documentation": {}
     },
     {
-        "label": "Pesso",
+        "label": "compras_cliente",
+        "kind": 5,
+        "importPath": "banco_dados_mercado.tabela",
+        "description": "banco_dados_mercado.tabela",
+        "peekOfCode": "compras_cliente = cursor.execute('SELECT id_transacao, dt_compra FROM transacoes WHERE id_cliente=1')\nfor transacoes in compras_cliente:\n   print(transacoes)\n# Calcular o total de vendas por categoria de produto:\ncategoria_produtos = {\n    0 : \"todas\",\n    1 : \"limpeza\",\n    2 : \"mercado\",\n    3 : \"biscoitos\",\n    4 : \"bebidas\"",
+        "detail": "banco_dados_mercado.tabela",
+        "documentation": {}
+    },
+    {
+        "label": "categoria_produtos",
+        "kind": 5,
+        "importPath": "banco_dados_mercado.tabela",
+        "description": "banco_dados_mercado.tabela",
+        "peekOfCode": "categoria_produtos = {\n    0 : \"todas\",\n    1 : \"limpeza\",\n    2 : \"mercado\",\n    3 : \"biscoitos\",\n    4 : \"bebidas\"\n}\ntotal_vendas = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto')\nfor produtos in total_vendas:\n    print(f\"Nosso mercado vendeu o total de {produtos} categoria {categoria_produtos[0]}\")",
+        "detail": "banco_dados_mercado.tabela",
+        "documentation": {}
+    },
+    {
+        "label": "total_vendas",
+        "kind": 5,
+        "importPath": "banco_dados_mercado.tabela",
+        "description": "banco_dados_mercado.tabela",
+        "peekOfCode": "total_vendas = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto')\nfor produtos in total_vendas:\n    print(f\"Nosso mercado vendeu o total de {produtos} categoria {categoria_produtos[0]}\")\ntotal_vendas_limpeza = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"limpeza\"')\nfor limpeza in total_vendas_limpeza:\n    print(f\"Nosso mercado vendeu o total de {limpeza} categoria {categoria_produtos[1]}\")\ntotal_vendas_mercado = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"mercado\"')\nfor mercado in total_vendas_mercado:\n    print(f\"Nosso mercado vendeu o total de {mercado} categoria {categoria_produtos[2]}\")\ntotal_vendas_biscoitos = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"biscoitos\"')",
+        "detail": "banco_dados_mercado.tabela",
+        "documentation": {}
+    },
+    {
+        "label": "total_vendas_limpeza",
+        "kind": 5,
+        "importPath": "banco_dados_mercado.tabela",
+        "description": "banco_dados_mercado.tabela",
+        "peekOfCode": "total_vendas_limpeza = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"limpeza\"')\nfor limpeza in total_vendas_limpeza:\n    print(f\"Nosso mercado vendeu o total de {limpeza} categoria {categoria_produtos[1]}\")\ntotal_vendas_mercado = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"mercado\"')\nfor mercado in total_vendas_mercado:\n    print(f\"Nosso mercado vendeu o total de {mercado} categoria {categoria_produtos[2]}\")\ntotal_vendas_biscoitos = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"biscoitos\"')\nfor biscoitos in total_vendas_biscoitos:\n    print(f\"Nosso mercado vendeu o total de {biscoitos} categoria {categoria_produtos[3]}\")\ntotal_vendas_bebidas = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"bebidas\"')",
+        "detail": "banco_dados_mercado.tabela",
+        "documentation": {}
+    },
+    {
+        "label": "total_vendas_mercado",
+        "kind": 5,
+        "importPath": "banco_dados_mercado.tabela",
+        "description": "banco_dados_mercado.tabela",
+        "peekOfCode": "total_vendas_mercado = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"mercado\"')\nfor mercado in total_vendas_mercado:\n    print(f\"Nosso mercado vendeu o total de {mercado} categoria {categoria_produtos[2]}\")\ntotal_vendas_biscoitos = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"biscoitos\"')\nfor biscoitos in total_vendas_biscoitos:\n    print(f\"Nosso mercado vendeu o total de {biscoitos} categoria {categoria_produtos[3]}\")\ntotal_vendas_bebidas = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"bebidas\"')\nfor bebidas in total_vendas_bebidas:\n    print(f\"Nosso mercado vendeu o total de {bebidas} categoria {categoria_produtos[4]}\")\n# Identificar os produtos mais vendidos:",
+        "detail": "banco_dados_mercado.tabela",
+        "documentation": {}
+    },
+    {
+        "label": "total_vendas_biscoitos",
+        "kind": 5,
+        "importPath": "banco_dados_mercado.tabela",
+        "description": "banco_dados_mercado.tabela",
+        "peekOfCode": "total_vendas_biscoitos = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"biscoitos\"')\nfor biscoitos in total_vendas_biscoitos:\n    print(f\"Nosso mercado vendeu o total de {biscoitos} categoria {categoria_produtos[3]}\")\ntotal_vendas_bebidas = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"bebidas\"')\nfor bebidas in total_vendas_bebidas:\n    print(f\"Nosso mercado vendeu o total de {bebidas} categoria {categoria_produtos[4]}\")\n# Identificar os produtos mais vendidos:\nprodutos_mais_vendidos = cursor.execute('SELECT * FROM transacoes ORDER BY qtde_comprada,id_produto')\nfor transacoes in produtos_mais_vendidos:\n   print(transacoes)",
+        "detail": "banco_dados_mercado.tabela",
+        "documentation": {}
+    },
+    {
+        "label": "total_vendas_bebidas",
+        "kind": 5,
+        "importPath": "banco_dados_mercado.tabela",
+        "description": "banco_dados_mercado.tabela",
+        "peekOfCode": "total_vendas_bebidas = cursor.execute('SELECT SUM(qtde_comprada) FROM transacoes INNER JOIN produtos ON transacoes.id_produto=produtos.id_produto WHERE produtos.categoria_produto = \"bebidas\"')\nfor bebidas in total_vendas_bebidas:\n    print(f\"Nosso mercado vendeu o total de {bebidas} categoria {categoria_produtos[4]}\")\n# Identificar os produtos mais vendidos:\nprodutos_mais_vendidos = cursor.execute('SELECT * FROM transacoes ORDER BY qtde_comprada,id_produto')\nfor transacoes in produtos_mais_vendidos:\n   print(transacoes)\nconexao.commit()\nconexao.close()",
+        "detail": "banco_dados_mercado.tabela",
+        "documentation": {}
+    },
+    {
+        "label": "produtos_mais_vendidos",
+        "kind": 5,
+        "importPath": "banco_dados_mercado.tabela",
+        "description": "banco_dados_mercado.tabela",
+        "peekOfCode": "produtos_mais_vendidos = cursor.execute('SELECT * FROM transacoes ORDER BY qtde_comprada,id_produto')\nfor transacoes in produtos_mais_vendidos:\n   print(transacoes)\nconexao.commit()\nconexao.close()",
+        "detail": "banco_dados_mercado.tabela",
+        "documentation": {}
+    },
+    {
+        "label": "Pessoa",
         "kind": 6,
         "importPath": "sistema_mercado.Mercado",
         "description": "sistema_mercado.Mercado",
-        "peekOfCode": "class Pessoa :\n    def __init__(self, id, nome, telefone, endereco):\n        self._id= id;\n        self._nome = nome;\n        self._telefone = telefone;\n        self._endereco = endereco;\n        @property\n        def id(self):\n            return self._id;\n        @property",
+        "peekOfCode": "class Pessoa(ABC):\n    def __init__(self, id, nome, telefone, endereco):\n        self._id= id\n        self._nome = nome\n        self._telefone = telefone\n        self._endereco = endereco\n    @property\n    def id(self):\n        return self._id\n    @property",
         "detail": "sistema_mercado.Mercado",
         "documentation": {}
     },
@@ -84,7 +145,7 @@
         "kind": 6,
         "importPath": "sistema_mercado.Mercado",
         "description": "sistema_mercado.Mercado",
-        "peekOfCode": "class Cliente(Pessoa):\n    def __init__(self, id, nome, telefone, endereco):\n        super().__init__(id, nome, telefone, endereco)\n         #Método para exibir informações do cliente\n    def __str__(self):\n        return f'Cliente: {self._nome}\\nTelefone: {self._telefone}\\nEndereço: {self._endereco}'\nclass Mercado():\n    def __init__(self):\n        self.__lista_clientes = [];\n        self.lista_produtos = [];",
+        "peekOfCode": "class Cliente(Pessoa):\n    def __init__(self, id, nome, telefone, endereco):\n        super().__init__(id, nome, telefone, endereco)\n         # Método para exibir informações do cliente utilizando o método abstrato\n    def exibir_informacoes(self):\n        return f'Cliente: {self._nome}\\nTelefone: {self._telefone}\\nEndereço: {self._endereco}'        \nclass Mercado():\n    def __init__(self):\n        self.__lista_clientes = []\n        self.lista_produtos = []",
         "detail": "sistema_mercado.Mercado",
         "documentation": {}
     },
@@ -93,7 +154,7 @@
         "kind": 6,
         "importPath": "sistema_mercado.Mercado",
         "description": "sistema_mercado.Mercado",
-        "peekOfCode": "class Mercado():\n    def __init__(self):\n        self.__lista_clientes = [];\n        self.lista_produtos = [];\n        self.__lista_transacoes = [];\n    @property \n    def lista_transacoes(self):\n        return self.__lista_transacoes;\n    def vender_produto(self, produto, cliente, quantidade):\n        if quantidade > produto.quantidade_produtos:",
+        "peekOfCode": "class Mercado():\n    def __init__(self):\n        self.__lista_clientes = []\n        self.lista_produtos = []\n        self.__lista_transacoes = []\n    @property \n    def lista_transacoes(self):\n        return self.__lista_transacoes\n    def adicionar_cliente(self,cliente):\n        self.__lista_clientes.append(cliente)",
         "detail": "sistema_mercado.Mercado",
         "documentation": {}
     },
@@ -102,7 +163,7 @@
         "kind": 6,
         "importPath": "sistema_mercado.Mercado",
         "description": "sistema_mercado.Mercado",
-        "peekOfCode": "class Produto:\n    def __init__(self, id_produto, nome_produto, quantidade_produtos):\n        self.id_produto = id_produto;\n        self.nome = nome_produto\n        self.categoria = []\n        self._quantidade_produtos = quantidade_produtos;\n        self.fornecedores =[]\n    def adicionar_fornecedor(self, fornecedor):\n        self.fornecedores.append(fornecedor);\n    def adicionar_categoria(self, categoria):",
+        "peekOfCode": "class Produto:\n    def __init__(self, id_produto, nome_produto, quantidade_produtos):\n        self.__id_produto = id_produto\n        self.__nome = nome_produto\n        self.categoria = []\n        self._quantidade_produtos = quantidade_produtos\n        self.fornecedores =[]\n    @property\n    def id_produto(self):\n        return self.__id_produto",
         "detail": "sistema_mercado.Mercado",
         "documentation": {}
     },
@@ -111,7 +172,7 @@
         "kind": 6,
         "importPath": "sistema_mercado.Mercado",
         "description": "sistema_mercado.Mercado",
-        "peekOfCode": "class Transacao:\n    def __init__(self, id_cliente, nome_cliente, produtos, quantidade):\n        self._id_cliente = id_cliente;\n        self._nome_cliente = nome_cliente;\n        self._produtos = produtos\n        self._quantidade = quantidade\n        self.data_da_compra = datetime.now();\n    def __str__(self):\n        data_formatada = self.data_da_compra.strftime('%d %m %Y %H:%M');\n        return (f'ID: {self._id_cliente}\\n'",
+        "peekOfCode": "class Transacao:\n    def __init__(self, id_cliente, nome_cliente, produtos, quantidade):\n        self._id_cliente = id_cliente\n        self._nome_cliente = nome_cliente\n        self._produtos = produtos\n        self._quantidade = quantidade\n        self.data_da_compra = datetime.now()\n    def __str__(self):\n        data_formatada = self.data_da_compra.strftime('%d %m %Y %H:%M')\n        return (f'ID: {self._id_cliente}\\n'",
         "detail": "sistema_mercado.Mercado",
         "documentation": {}
     },
@@ -120,7 +181,7 @@
         "kind": 5,
         "importPath": "sistema_mercado.Mercado",
         "description": "sistema_mercado.Mercado",
-        "peekOfCode": "mercado = Mercado();\ncliente1 = Cliente(1,\"Clarice\", 87879494, \"Campina Grande\")\nmercado.adicionar_cliente(cliente1);\nproduto1 = Produto(1,\"Arroz\",50);\nproduto1.adicionar_categoria(\"Carboidratos\");\nproduto1.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto1);\nproduto2 = Produto(2,\"Feijão\",10);\nproduto2.adicionar_categoria(\"Proteina\");\nproduto2.adicionar_fornecedor(\"Comercial Norte Distribuição\")",
+        "peekOfCode": "mercado = Mercado()\ncliente1 = Cliente(1,\"Clarice\", 87879494, \"Campina Grande\")\nprint(cliente1.exibir_informacoes())\ncliente2 = Cliente(2,\"Carol\",78459682,\"Novo Buritizal\")\nmercado.adicionar_cliente(cliente1)\nmercado.adicionar_cliente(cliente2)\nproduto1 = Produto(1,\"Arroz\",50)\nproduto1.adicionar_categoria(\"Carboidratos\")\nproduto1.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto1)",
         "detail": "sistema_mercado.Mercado",
         "documentation": {}
     },
@@ -129,7 +190,16 @@
         "kind": 5,
         "importPath": "sistema_mercado.Mercado",
         "description": "sistema_mercado.Mercado",
-        "peekOfCode": "cliente1 = Cliente(1,\"Clarice\", 87879494, \"Campina Grande\")\nmercado.adicionar_cliente(cliente1);\nproduto1 = Produto(1,\"Arroz\",50);\nproduto1.adicionar_categoria(\"Carboidratos\");\nproduto1.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto1);\nproduto2 = Produto(2,\"Feijão\",10);\nproduto2.adicionar_categoria(\"Proteina\");\nproduto2.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto2);",
+        "peekOfCode": "cliente1 = Cliente(1,\"Clarice\", 87879494, \"Campina Grande\")\nprint(cliente1.exibir_informacoes())\ncliente2 = Cliente(2,\"Carol\",78459682,\"Novo Buritizal\")\nmercado.adicionar_cliente(cliente1)\nmercado.adicionar_cliente(cliente2)\nproduto1 = Produto(1,\"Arroz\",50)\nproduto1.adicionar_categoria(\"Carboidratos\")\nproduto1.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto1)\nproduto2 = Produto(2,\"Feijão\",10)",
+        "detail": "sistema_mercado.Mercado",
+        "documentation": {}
+    },
+    {
+        "label": "cliente2",
+        "kind": 5,
+        "importPath": "sistema_mercado.Mercado",
+        "description": "sistema_mercado.Mercado",
+        "peekOfCode": "cliente2 = Cliente(2,\"Carol\",78459682,\"Novo Buritizal\")\nmercado.adicionar_cliente(cliente1)\nmercado.adicionar_cliente(cliente2)\nproduto1 = Produto(1,\"Arroz\",50)\nproduto1.adicionar_categoria(\"Carboidratos\")\nproduto1.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto1)\nproduto2 = Produto(2,\"Feijão\",10)\nproduto2.adicionar_categoria(\"Proteina\")\nproduto2.adicionar_fornecedor(\"Comercial Norte Distribuição\")",
         "detail": "sistema_mercado.Mercado",
         "documentation": {}
     },
@@ -138,7 +208,7 @@
         "kind": 5,
         "importPath": "sistema_mercado.Mercado",
         "description": "sistema_mercado.Mercado",
-        "peekOfCode": "produto1 = Produto(1,\"Arroz\",50);\nproduto1.adicionar_categoria(\"Carboidratos\");\nproduto1.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto1);\nproduto2 = Produto(2,\"Feijão\",10);\nproduto2.adicionar_categoria(\"Proteina\");\nproduto2.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto2);\nmercado.vender_produto(produto1, cliente1, 10);\nmercado.vender_produto(produto2, cliente1, 5);",
+        "peekOfCode": "produto1 = Produto(1,\"Arroz\",50)\nproduto1.adicionar_categoria(\"Carboidratos\")\nproduto1.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto1)\nproduto2 = Produto(2,\"Feijão\",10)\nproduto2.adicionar_categoria(\"Proteina\")\nproduto2.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto2)\nmercado.vender_produto(produto1, cliente1, 10)\nmercado.vender_produto(produto2, cliente1, 5)",
         "detail": "sistema_mercado.Mercado",
         "documentation": {}
     },
@@ -147,7 +217,7 @@
         "kind": 5,
         "importPath": "sistema_mercado.Mercado",
         "description": "sistema_mercado.Mercado",
-        "peekOfCode": "produto2 = Produto(2,\"Feijão\",10);\nproduto2.adicionar_categoria(\"Proteina\");\nproduto2.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto2);\nmercado.vender_produto(produto1, cliente1, 10);\nmercado.vender_produto(produto2, cliente1, 5);\nmercado.vender_produto(produto2, cliente1, 10);\n#estoque do produto apos compras do cliente\nprint(f'Estoque do produto\\n {produto1}');\nprint(f'Estoque do produto\\n {produto2}');",
+        "peekOfCode": "produto2 = Produto(2,\"Feijão\",10)\nproduto2.adicionar_categoria(\"Proteina\")\nproduto2.adicionar_fornecedor(\"Comercial Norte Distribuição\")\nmercado.adicionar_produto(produto2)\nmercado.vender_produto(produto1, cliente1, 10)\nmercado.vender_produto(produto2, cliente1, 5)\nmercado.vender_produto(produto2, cliente1, 10)\n#estoque do produto apos compras do cliente\nprint(f'Estoque do produto\\n {produto1}')\nprint(f'Estoque do produto\\n {produto2}')",
         "detail": "sistema_mercado.Mercado",
         "documentation": {}
     }
