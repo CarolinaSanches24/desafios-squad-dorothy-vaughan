@@ -1,6 +1,6 @@
 import sqlite3
 
-conexao = sqlite3.connect('mercado.bd')
+conexao = sqlite3.connect('mercado')
 cursor = conexao.cursor()
 
 # cursor.execute('CREATE TABLE clientes(id_cliente int primary key, nome_cliente varchar(100), telefone_cliente varchar(20), endereco_cliente varchar(100))')
@@ -13,6 +13,7 @@ cursor = conexao.cursor()
 # cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (3, "Simone", "34544321", "rua rosas")')
 # cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (4, "Jane", "12355321", "rua margaridas")')
 # cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (5, "Isadora", "12346661", "rua tulipa")')
+# cursor.execute('insert into clientes(id_cliente, nome_cliente, telefone_cliente, endereco_cliente) values (6, "Carolina", "84237428", "passarela 13")')
 
 # cursor.execute('insert into produtos(id_produto, nome_produto, categoria_produto, qtde_produto, valor_produto, fornecedor_produto) values (1, "sabao limpinho", "limpeza", 10, 5.00, "triex")')
 # cursor.execute('insert into produtos(id_produto, nome_produto, categoria_produto, qtde_produto, valor_produto, fornecedor_produto) values (2, "arroz", "mercado", 18, 15.00, "camil")')
@@ -27,26 +28,20 @@ cursor = conexao.cursor()
 # cursor.execute('insert into transacoes(id_transacao, dt_compra, qtde_comprada, id_produto, id_cliente) values (5, "2024-01-17", 2, 2, 1)')
 
 
-#cursor.execute('UPDATE produtos SET qtde_produto = qtde_produto -3 WHERE id_produto = 1')
-#cursor.execute('UPDATE produtos SET valor_produto = 9.90 WHERE id_produto = 5')
-
-
-cursor.execute('DELETE FROM clientes WHERE id_cliente = 2')
-
-
-# Listar todos produtos em estoque:
+# Consultas SQL
+# # Listar todos produtos em estoque:
 estoque_mercado = cursor.execute('SELECT nome_produto,qtde_produto FROM produtos') 
 for produtos in estoque_mercado:
    print(produtos)
 
 
-# Encontrar as compras realizadas por um cliente específico:
+# # Encontrar as compras realizadas por um cliente específico:
 compras_cliente = cursor.execute('SELECT id_transacao, dt_compra FROM transacoes WHERE id_cliente=1')
 for transacoes in compras_cliente:
    print(transacoes)
 
 
-# Calcular o total de vendas por categoria de produto:
+# # Calcular o total de vendas por categoria de produto:
 categoria_produtos = {
     0 : "todas",
     1 : "limpeza",
@@ -81,6 +76,13 @@ produtos_mais_vendidos = cursor.execute('SELECT * FROM transacoes ORDER BY qtde_
 for transacoes in produtos_mais_vendidos:
    print(transacoes)
   
+
+# Atualizações e Exclusões
+cursor.execute('UPDATE produtos SET qtde_produto = qtde_produto -3 WHERE id_produto = 1')
+cursor.execute('UPDATE produtos SET valor_produto = 9.50 WHERE id_produto = 5')
+
+
+cursor.execute('DELETE FROM clientes WHERE id_cliente = 2')
 
 conexao.commit()
 conexao.close()
