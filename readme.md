@@ -31,7 +31,8 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 2. Maria carolina adicionou classe pessoa para aplicar conceito de herança visto que cliente e uma pessoa , criou a classe mercado adicionou também alguns metodos para adicionar os objetos clientes, produtos e armazenar o historico de transacoes em lista, assim como também métodos para mostrar os dados armazenados nas listas clientes,corrigiu o método mostrar clientes produtos, transacoes.
 3. Isadora modificou algumas linhas do comando para verificar se os valores incluídos estavam no dentro do esperado, e as incluiu dentro de um tratamento de exceções.
 4. Thaís Aparecida importou o módulo abc com a classe ABC e o decorador abstractmethod. Atualizou a classe Pessoa como abstrata e inseriu o método abstrato dentro da classe Pessoa.
-
+5. Maria Carolina Revisou e fez testes nas queries SQL.
+6. Jane Souza adicionou decorador @property à classe produto, em dois atributos para tornarem acessíveis como propriedades.
 ## Desafio 2 - Banco de dados Sistema Gerenciamento Biblioteca
 
     Branch:
