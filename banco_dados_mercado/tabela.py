@@ -27,6 +27,13 @@ cursor = conexao.cursor()
 # cursor.execute('insert into transacoes(id_transacao, dt_compra, qtde_comprada, id_produto, id_cliente) values (5, "2024-01-17", 2, 2, 1)')
 
 
+#cursor.execute('UPDATE produtos SET qtde_produto = qtde_produto -3 WHERE id_produto = 1')
+#cursor.execute('UPDATE produtos SET valor_produto = 9.90 WHERE id_produto = 5')
+
+
+cursor.execute('DELETE FROM clientes WHERE id_cliente = 2')
+
+
 # Listar todos produtos em estoque:
 estoque_mercado = cursor.execute('SELECT nome_produto,qtde_produto FROM produtos') 
 for produtos in estoque_mercado:

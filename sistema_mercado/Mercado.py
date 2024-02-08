@@ -93,14 +93,20 @@ class Mercado():
         
     
             
+
 class Produto:
     def __init__(self, id_produto, nome_produto, quantidade_produtos):
-        self.id_produto = id_produto
-        self.nome = nome_produto
+        self.__id_produto = id_produto
+        self.__nome = nome_produto
         self.categoria = []
         self._quantidade_produtos = quantidade_produtos
         self.fornecedores =[]
-    
+    @property
+    def id_produto(self):
+        return self.__id_produto
+    @property
+    def nome(self):
+        return self.__nome
     def adicionar_fornecedor(self, fornecedor):
         self.fornecedores.append(fornecedor)
     

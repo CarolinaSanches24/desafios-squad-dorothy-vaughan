@@ -163,7 +163,7 @@
         "kind": 6,
         "importPath": "sistema_mercado.Mercado",
         "description": "sistema_mercado.Mercado",
-        "peekOfCode": "class Produto:\n    def __init__(self, id_produto, nome_produto, quantidade_produtos):\n        self.id_produto = id_produto\n        self.nome = nome_produto\n        self.categoria = []\n        self._quantidade_produtos = quantidade_produtos\n        self.fornecedores =[]\n    def adicionar_fornecedor(self, fornecedor):\n        self.fornecedores.append(fornecedor)\n    def adicionar_categoria(self, categoria):",
+        "peekOfCode": "class Produto:\n    def __init__(self, id_produto, nome_produto, quantidade_produtos):\n        self.__id_produto = id_produto\n        self.__nome = nome_produto\n        self.categoria = []\n        self._quantidade_produtos = quantidade_produtos\n        self.fornecedores =[]\n    @property\n    def id_produto(self):\n        return self.__id_produto",
         "detail": "sistema_mercado.Mercado",
         "documentation": {}
     },

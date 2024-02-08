@@ -28,8 +28,9 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 #### Requisitos:
 
 1. Clarice Soares adicionou as primeiras linhas de código e criou três classes: Cliente, Produto e Transação e adicionou os construtores.
-2. Maria carolina adicionou classe pessoa para aplicar conceito de herança visto que cliente e uma pessoa , criou a classe mercado adicionou também alguns metodos para adicionar os objetos clientes, produtos e armazenar o historico de transacoes em lista, assim como também métodos para mostrar os dados armazenados nas listas clientes, produtos, transacoes.
-3. Maria carolina corrigiu o método mostrar clientes
+2. Maria carolina adicionou classe pessoa para aplicar conceito de herança visto que cliente e uma pessoa , criou a classe mercado adicionou também alguns metodos para adicionar os objetos clientes, produtos e armazenar o historico de transacoes em lista, assim como também métodos para mostrar os dados armazenados nas listas clientes, produtos, transacoes, corrigiu o método mostrar clientes.
+3. Isadora modificou algumas linhas do comando para verificar se os valores incluídos estavam no dentro do esperado, e as incluiu dentro de um tratamento de exceções.
+4. Thaís Aparecida importou o módulo abc com a classe ABC e o decorador abstractmethod. Atualizou a classe Pessoa como abstrata e inseriu o método abstrato dentro da classe Pessoa.
 
 ## Desafio 2 - Banco de dados Sistema Gerenciamento Biblioteca
 
@@ -65,6 +66,6 @@ Escreva consultas SQL para atualizar e excluir registros do banco
 de dados, por exemplo, para atualizar a quantidade em estoque
 após uma venda ou remover um cliente.
 
-1.
-2.
-3.
+1. MaiteHaramoni atualizou a tabela produtos com -3 produtos do id produto 1.
+2. MaiteHaramoni atualizou a tabela produtos com alteração de preço do id produto 5 para 9.90.
+3. MaiteHaramoni excluiu o registro da tabela clientes do id cliente 2.
