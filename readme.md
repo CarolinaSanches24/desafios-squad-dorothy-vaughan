@@ -33,6 +33,7 @@ Repositório colaborativo do Squad Dorothy Vaughan, referente ao Desafio de Cód
 4. Thaís Aparecida importou o módulo abc com a classe ABC e o decorador abstractmethod. Atualizou a classe Pessoa como abstrata e inseriu o método abstrato dentro da classe Pessoa.
 5. Maria Carolina Revisou e fez testes nas queries SQL.
 6. Jane Souza adicionou decorador @property à classe produto, em dois atributos para tornarem acessíveis como propriedades.
+
 ## Desafio 2 - Banco de dados Sistema Gerenciamento Biblioteca
 
     Branch:
